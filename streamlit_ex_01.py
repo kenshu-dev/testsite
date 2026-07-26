@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+st.write("テスト表示")
 
 st.title('広告費と売上')
 
