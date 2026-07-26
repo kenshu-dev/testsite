@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-st.write("テスト表示")
 
 st.title('広告費と売上')
 
@@ -52,8 +51,8 @@ fig = px.scatter(df, x='ad_expense', y='sales', width=600, height=500,
                  range_y=[0, df['sales'].max()*1.1], 
                  color=group, 
                  labels={'ad_expense':'広告費(万円)', 
-                         'sales':'売上(万円)'})#, 
-                 #trendline='ols')
+                         'sales':'売上(万円)'}, 
+                 trendline='ols')
 
 fig.update_xaxes(dtick=dtick)
 st.plotly_chart(fig)
